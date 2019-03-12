@@ -98,8 +98,8 @@ import random
 # =============================================================================
 
 # for gpu
-file_list = ['mimic-data-file.txt']
-# file_list = ['Charles Dickens___The Chimes.txt', 'G K Chesterton___The Trees of Pride.txt']
+# file_list = ['mimic-data-file.txt']
+file_list = ['mimic-data-file-test.txt']
 vocab_file = join(save_dir, "words_vocab.pkl")
 
 
@@ -219,6 +219,8 @@ history = md.fit(X, y,
                  epochs=num_epochs,
                  callbacks=callbacks,
                  validation_split=0.01)
+
+# Generation flow starts here
 
 #save the model
 md.save(save_dir + "/" + 'my_model_gen_sentences_lstm.final.hdf5')
